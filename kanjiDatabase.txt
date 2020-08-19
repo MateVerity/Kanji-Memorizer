@@ -1,0 +1,36 @@
+1 : {
+Character : 悪
+Meaning : Evil, bad, demon
+OnReading : アク
+KunReading : わる
+}
+2 : {
+Character : 以
+Meaning : Não menos que
+OnReading : イ
+KunReading : もって
+}
+3 : {
+Character : 医
+Meaning : Doutor
+OnReading : イ
+KunReading : nulo
+}
+4 : {
+Character : 員
+Meaning : Funcionário
+OnReading : イン
+KunReading : nulo
+}
+5 : {
+Character : 安
+Meaning : Barato, calmo
+OnReading : アン
+KunReading : やすみ
+}
+6 : {
+Character : 飲
+Meaning : Beber, bebida
+OnReading : イン
+KunReading : の
+}
