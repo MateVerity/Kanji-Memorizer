@@ -20,42 +20,31 @@ public class KanjiDBSplitter {
                 String[] IDtoken = line.split("( : )");
 
                 switch (counter) {
-
-                    case (1): {
+                    case (1) -> {
                         tempID = Integer.parseInt(IDtoken[0]);
                         counter++;
-                        break;
                     }
-                    case (2): {
+                    case (2) -> {
                         tempCharacter = IDtoken[1];
                         counter++;
-                        break;
                     }
-                    case (3): {
+                    case (3) -> {
                         tempMeaning = IDtoken[1];
                         counter++;
-                        break;
                     }
-                    case (4): {
+                    case (4) -> {
                         tempOn = IDtoken[1];
                         counter++;
-                        break;
                     }
-                    case (5): {
+                    case (5) -> {
                         KanjiData newkanji = new KanjiData(tempID, tempCharacter, tempMeaning, tempOn, IDtoken[1]);
                         KanjiDB.add(newkanji);
                         counter++;
-                        break;
                     }
-                    case (6): {
-                        counter = 1;
-                        break;
-                    }
+                    case (6) -> counter = 1;
                 }
             }
 
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         }
