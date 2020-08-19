@@ -1,0 +1,1 @@
+java --module-path "C:\Developer Tools\JavaFX SDK\lib" --add-modules javafx.controls,javafx.fxml -jar KanjiMemorizer.jar

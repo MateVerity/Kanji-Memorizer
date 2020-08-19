@@ -1,0 +1,17 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Kanji-Memorizer:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/Kanji_Memorizer_jar</output-path>
+    <root id="archive" name="Kanji-Memorizer.jar">
+      <element id="module-output" name="Kanji-Memorizer" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/src.zip" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx-swt.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.web.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.base.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.fxml.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.media.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.swing.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.controls.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib/javafx.graphics.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>

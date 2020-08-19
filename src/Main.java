@@ -14,7 +14,6 @@ import java.util.ArrayList;
 import java.util.Random;
 import java.util.concurrent.ThreadLocalRandom;
 
-
 public class Main extends Application {
 
     public ArrayList<KanjiData> KanjiDatabase;
