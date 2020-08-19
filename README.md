@@ -12,7 +12,7 @@ it to the user in the form of questions.</p>
 <blockquote>
     <p>強</p>
     
-    ![Example Image](ExampleImage.png)
+    ![GitHub Logo](/images/logo.png)
 	
 	Meaning: Strong
 
