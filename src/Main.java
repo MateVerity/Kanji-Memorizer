@@ -5,23 +5,26 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 import java.io.*;
 import java.util.ArrayList;
-
+import java.util.Random;
+import java.util.concurrent.ThreadLocalRandom;
 
 
 public class Main extends Application {
 
     public ArrayList<KanjiData> KanjiDatabase;
     public int ind = 0;
+    public int currentKanji = 0;
     private final Pane layer0 = new Pane();
     private final Pane root = new Pane();
     Scene scene = new Scene(root, 1000, 550);
     Scene scene1 = new Scene(layer0, 1000, 550);
-    private final HBox layer1 = new HBox();
+    private final Pane layer1 = new Pane();
     Scene scene2 = new Scene(layer1, 1000,550);
 
 
@@ -30,14 +33,21 @@ public class Main extends Application {
         Button returnfromgamebtn = new Button();
         Button submit = new Button();
         returnfromgamebtn.setText("Voltar");
-        submit.setText("Submeter Resposta");
+        submit.setText("Próximo");
         Label labelKUN = new Label("Leitura Kun'Yomi:");
         TextField textfKun = new TextField();
         Label labenON = new Label("Leitura On'Yomi:");
         TextField textfOn = new TextField();
         Label labelMeaning = new Label ("Significado:");
         TextField textfMeaning = new TextField();
-        
+        Text hugeKanji = new Text();
+        hugeKanji.setFont(Font.font("Verdana", 300));
+        Button checkAnswer = new Button();
+        checkAnswer.setText("Checar respostas");
+        Button showAnswer = new Button();
+        showAnswer.setText("Mostrar resposta");
+
+
 
         Button gamebtn = new Button();
         gamebtn.setText("Testar Memorização");
@@ -89,6 +99,54 @@ public class Main extends Application {
 
         gamebtn.setOnAction(actionEvent -> {
             primaryStage.setScene(scene2);
+            String[] onlyCharacter = new String(KanjiDatabase.get(currentKanji).KanjiCharacter).split(";");
+            hugeKanji.setText(onlyCharacter[0]);
+
+        });
+
+        submit.setOnAction(actionEvent -> {
+           currentKanji = ThreadLocalRandom.current().nextInt(0, KanjiDatabase.size());
+            String[] onlyCharacter = new String(KanjiDatabase.get(currentKanji).KanjiCharacter).split(";");
+            hugeKanji.setText(onlyCharacter[0]);
+            textfKun.setText("");
+            textfMeaning.setText("");
+            textfOn.setText("");
+        });
+
+        checkAnswer.setOnAction(actionEvent -> {
+            String meaningAnswer = null, kunAnswer = null, onAnswer = null;
+            meaningAnswer = textfMeaning.getText();
+            kunAnswer = textfKun.getText();
+            onAnswer = textfOn.getText();
+
+            if(meaningAnswer.equals(KanjiDatabase.get(currentKanji).KanjiMeaning) && kunAnswer.equals(KanjiDatabase.get(currentKanji).KunReading) &&
+            onAnswer.equals(KanjiDatabase.get(currentKanji).OnReading)){
+
+                Alert victory = new Alert(Alert.AlertType.INFORMATION);
+                victory.setTitle("Parabéns");
+                victory.setContentText("Você acertou todo o kanji!");
+                victory.showAndWait();
+
+            }
+            else {
+                Alert defeat = new Alert(Alert.AlertType.ERROR);
+                defeat.setTitle("Que pena");
+                defeat.setContentText("Você errou!");
+                defeat.showAndWait();
+            }
+
+
+        });
+
+        showAnswer.setOnAction(actionEvent -> {
+            Alert answers = new Alert(Alert.AlertType.INFORMATION);
+            answers.setTitle("Respostas");
+            answers.setContentText(KanjiDatabase.get(currentKanji).KanjiMeaning + "\n" + KanjiDatabase.get(currentKanji).KunReading + "\n" +
+                    KanjiDatabase.get(currentKanji).OnReading);
+            answers.showAndWait();
+
+
+
 
         });
 
@@ -113,12 +171,37 @@ public class Main extends Application {
         gamebtn.setLayoutY(350);
         gamebtn.setLayoutX(350);
         gamebtn.setMinSize(120,120);
+        labelMeaning.setLayoutX(10);
+        labenON.setLayoutX(10);
+        labelKUN.setLayoutX(10);
+        labelMeaning.setLayoutY(50);
+        labelKUN.setLayoutY(250);
+        labenON.setLayoutY(150);
+        textfMeaning.setLayoutX(150);
+        textfMeaning.setLayoutY(50);
+        textfOn.setLayoutX(150);
+        textfOn.setLayoutY(150);
+        textfKun.setLayoutX(150);
+        textfKun.setLayoutY(250);
+        hugeKanji.setLayoutY(300);
+        hugeKanji.setLayoutX(350);
+        submit.setLayoutY(400);
+        submit.setLayoutX(125);
+        checkAnswer.setLayoutY(400);
+        checkAnswer.setLayoutX(230);
+        showAnswer.setLayoutY(400);
+        showAnswer.setLayoutX(370);
         layer0.getChildren().add(vbox);
         root.getChildren().add(Filebtn);
         layer0.getChildren().add(Readbtn);
         layer0.getChildren().add(Backbtn);
         layer0.getChildren().add(secondMenutitlte);
         layer0.getChildren().add(gamebtn);
+        layer1.getChildren().addAll(labelMeaning,textfMeaning,labenON, textfOn, labelKUN, textfKun);
+        layer1.getChildren().add(hugeKanji);
+        layer1.getChildren().add(submit);
+        layer1.getChildren().add(checkAnswer);
+        layer1.getChildren().add(showAnswer);
 
 
         primaryStage.setTitle("Kanji Memorizer");

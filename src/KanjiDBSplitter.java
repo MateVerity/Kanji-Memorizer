@@ -23,12 +23,10 @@ public class KanjiDBSplitter {
 
                 switch (counter) {
                     case (1) -> {
-                        try{
+
                         tempID = Integer.parseInt(IDtoken[0]);
-                        counter++;}
-                        catch(IndexOutOfBoundsException e){
-                            System.out.println("ERRO");
-                        }
+                        counter++;
+
                     }
                     case (2) -> {
 
