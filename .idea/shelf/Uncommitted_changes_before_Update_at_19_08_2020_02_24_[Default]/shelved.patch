@@ -1,0 +1,18 @@
+Index: README.md
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><h1>漢字　Kanji Memorizer　漢字</h1>\r\n\r\n<h2>Software to memorize kanji readings</h2>\r\n\r\n<p>The aim of this project is to learn some coding and GIT. The project itself consists of a software \r\ncapable of receiving kanjis and their meaning/readings. After having some kanjis in the database, present\r\nit to the user in the form of questions.</p>\r\n\r\n\r\n<h3>Example: </h3>\r\n\r\n<blockquote>\r\n    <p>強</p>\r\n\t\r\n\tMeaning: Strong\r\n\r\n    On'Yomi:きょう\r\n\r\n    Kun'Yomi:つよ\r\n</blockquote>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- README.md	(revision 8632ab05eb69796af8bafcc640e7c9d9da381345)
++++ README.md	(date 1597814583414)
+@@ -11,6 +11,8 @@
+ 
+ <blockquote>
+     <p>強</p>
++    
++    ![Example Image](ExampleImage.png)
+ 	
+ 	Meaning: Strong
+ 
