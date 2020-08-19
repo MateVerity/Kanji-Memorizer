@@ -1,3 +1,5 @@
+
+
 import java.io.*;
 import java.util.ArrayList;
 
@@ -21,10 +23,15 @@ public class KanjiDBSplitter {
 
                 switch (counter) {
                     case (1) -> {
+                        try{
                         tempID = Integer.parseInt(IDtoken[0]);
-                        counter++;
+                        counter++;}
+                        catch(IndexOutOfBoundsException e){
+                            System.out.println("ERRO");
+                        }
                     }
                     case (2) -> {
+
                         tempCharacter = IDtoken[1];
                         counter++;
                     }
@@ -48,6 +55,7 @@ public class KanjiDBSplitter {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
 
         return KanjiDB;
     }

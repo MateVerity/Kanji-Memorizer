@@ -34,3 +34,87 @@ Meaning : Não menos que;
 OnReading : イン;
 KunReading : の;
 }
+7 : {
+Character : 悪;
+Meaning : Evil, bad, demon;
+OnReading : アク
+KunReading : わる;
+}
+8 : {
+Character : 以;
+Meaning : Não menos que;
+OnReading : イ;
+KunReading : もって;
+}
+9 : {
+Character : 医;
+Meaning : Doutor;
+OnReading : イ;
+KunReading : nulo;
+}
+10 : {
+Character : 員;
+Meaning : Funcionário;
+OnReading : イン;
+KunReading : nulo;
+}
+11 : {
+Character : 安;
+Meaning : Barato, calmo;
+OnReading : アン;
+KunReading : やすみ;
+}
+12 : {
+Character : 飲;
+Meaning : Não menos que;
+OnReading : イン;
+KunReading : の;
+}
+13 : {
+Character : 悪;
+Meaning : Evil, bad, demon;
+OnReading : アク
+KunReading : わる;
+}
+14 : {
+Character : 以;
+Meaning : Não menos que;
+OnReading : イ;
+KunReading : もって;
+}
+15 : {
+Character : 医;
+Meaning : Doutor;
+OnReading : イ;
+KunReading : nulo;
+}
+16 : {
+Character : 員;
+Meaning : Funcionário;
+OnReading : イン;
+KunReading : nulo;
+}
+17 : {
+Character : 安;
+Meaning : Barato, calmo;
+OnReading : アン;
+KunReading : やすみ;
+}
+18 : {
+Character : 飲;
+Meaning : Não menos que;
+OnReading : イン;
+KunReading : の;
+}
+19 : {
+Character : 悪;
+Meaning : Evil, bad, demon;
+OnReading : アク
+KunReading : わる;
+}
+20 : {
+Character : 以;
+Meaning : Não menos que;
+OnReading : イ;
+KunReading : もって;
+}
