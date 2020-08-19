@@ -16,13 +16,16 @@ correct answers, try answering or go to the next one.</p>
 
 <h3>How it works: </h3>
 <p>The program needs a kanji database text file. The format should be exactly like that:</p>
-<blockhead>
-1 : {
-Character : 悪
-Meaning : Evil, bad, demon
-OnReading : アク
-KunReading : わる
-}</blockhead>
+<blockquote>
+
+>1 : {
+>Character : 悪
+>Meaning : Evil, bad, demon
+>OnReading : アク
+>KunReading : わる
+>}
+
+</blockquote>
 <p>Where the first number will be the Kanji ID. The following lines should be always
 separated with a space, a colon and another space. The } marks the ending of the kanji
 and the start of the next one.</p>
