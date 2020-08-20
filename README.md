@@ -30,3 +30,6 @@ and the start of the next one.</p>
 
 <p>Just select the file and the program will parse it. If no error messages are shown,
 you are ready to go.</p>
+
+<h2>Project Status</h2>
+<p>Prototype is almost finished, needs feature to write new kanjis on the file.</p>
