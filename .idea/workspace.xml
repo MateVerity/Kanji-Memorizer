@@ -25,11 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cdb932d9-7e58-4d94-93a9-e7b232ef17da" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/artifacts/Kanji_Memorizer_jar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/fakeMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/Kanji_Memorizer_jar.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Kanji-Memorizer/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kanji-Memorizer/Main.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Kanji-Memorizer/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Kanji-Memorizer/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/META-INF/MANIFEST.MF" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,8 +126,8 @@
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="dynamic.classpath" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/lib" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../Developer Tools/JavaFX SDK/bin/vcruntime140.dll" />
+    <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="recentsLimit" value="5" />
@@ -279,18 +279,18 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="134" y="133" width="1092" height="714" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597820523579" />
-    <state x="409" y="568" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597819489829">
+    <state x="409" y="568" key="#com.intellij.ide.util.TreeClassChooserDialog" timestamp="1597821191632">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="409" y="568" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597819489829" />
+    <state x="409" y="568" key="#com.intellij.ide.util.TreeClassChooserDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597821191632" />
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog" timestamp="1597803938536">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="267" key="#com.intellij.refactoring.typeMigration.ui.FailedConversionsDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1597803938536" />
-    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1597819292074">
+    <state x="666" y="261" key="FileChooserDialogImpl" timestamp="1597821246598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597819292074" />
+    <state x="666" y="261" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1597821246598" />
     <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1597820712601">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -307,10 +307,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1597820712601" />
-    <state x="329" y="189" width="1259" height="851" key="SettingsEditor" timestamp="1597820192226">
+    <state x="329" y="189" width="1259" height="851" key="SettingsEditor" timestamp="1597821265252">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="329" y="189" width="1259" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597820192226" />
+    <state x="329" y="189" width="1259" height="851" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1597821265252" />
     <state x="484" y="256" width="951" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1597807746315">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

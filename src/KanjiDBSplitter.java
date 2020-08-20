@@ -13,7 +13,7 @@ public class KanjiDBSplitter {
         try {
 
             KanjiDB = new ArrayList<>();
-            BufferedReader kanjiDBreader = new BufferedReader(new FileReader(KanjiDBFile));
+            BufferedReader kanjiDBreader = new BufferedReader(new InputStreamReader(new FileInputStream(KanjiDBFile), "UTF-8"));
             String line;
             String tempCharacter = null, tempMeaning = null, tempOn = null;
             int tempID = 0;
