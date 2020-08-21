@@ -56,6 +56,8 @@ public class Main extends Application {
         Button Filebtn = new Button();
         Button Readbtn = new Button();
         Button Backbtn = new Button();
+        Button Importbtn = new Button();
+        Importbtn.setText("Importar");
         Backbtn.setText("Anterior");
         Readbtn.setText("Próximo");
         Filebtn.setText("Ler arquivo");
@@ -77,19 +79,34 @@ public class Main extends Application {
         Readbtn.setOnAction(actionEvent -> {
             //AQUI ACONTECE QUANDO CLICAR NO OUTRO BOTÃO
 
-            if(ind < KanjiDatabase.size()-1) {
+            ind++;
+
+            if(ind <= KanjiDatabase.size()-1) {
                 kanjiTextPrint.setText("");
-                ind++;
                 KanjiData.TextKanjiList(KanjiDatabase, kanjiTextPrint, ind);
+
             }
-            System.out.println(ind);
+
+            else{
+                ind = 0;
+                kanjiTextPrint.setText("");
+                KanjiData.TextKanjiList(KanjiDatabase,kanjiTextPrint,ind);
+            }
 
         });
         Backbtn.setOnAction(actionEvent -> {
             //AQUI VOLTA O BOTAO
-            if(ind > 0)
+            ind--;
+            System.out.println(ind);
+            if(ind >= 0)
             {
-                ind--;
+                kanjiTextPrint.setText("");
+                KanjiData.TextKanjiList(KanjiDatabase, kanjiTextPrint, ind);
+
+            }
+            if(ind < 0)
+            {
+                ind = KanjiDatabase.size()-1;
                 kanjiTextPrint.setText("");
                 KanjiData.TextKanjiList(KanjiDatabase, kanjiTextPrint, ind);
             }
@@ -131,6 +148,14 @@ public class Main extends Application {
                 Alert defeat = new Alert(Alert.AlertType.ERROR);
                 defeat.setTitle("Que pena");
                 defeat.setContentText("Você errou!");
+                System.out.println(KanjiDatabase.get(currentKanji).KanjiMeaning);
+                if(meaningAnswer.equals(KanjiDatabase.get(currentKanji).KanjiMeaning))
+                    System.out.println("Significado correto.");
+                if(kunAnswer.equals(KanjiDatabase.get(currentKanji).KunReading))
+                    System.out.println("Kun correto");
+                if(onAnswer.equals(KanjiDatabase.get(currentKanji).OnReading))
+                    System.out.println("ON correto");
+
                 defeat.showAndWait();
             }
 
@@ -140,11 +165,25 @@ public class Main extends Application {
         showAnswer.setOnAction(actionEvent -> {
             Alert answers = new Alert(Alert.AlertType.INFORMATION);
             answers.setTitle("Respostas");
-            answers.setContentText(KanjiDatabase.get(currentKanji).KanjiMeaning + "\n" + KanjiDatabase.get(currentKanji).KunReading + "\n" +
-                    KanjiDatabase.get(currentKanji).OnReading);
+            answers.setContentText(KanjiDatabase.get(currentKanji).KanjiMeaning + "\n" + KanjiDatabase.get(currentKanji).OnReading + "\n" +
+                    KanjiDatabase.get(currentKanji).KunReading);
             answers.showAndWait();
 
 
+
+
+        });
+
+        Importbtn.setOnAction(actionEvent -> {
+            ArrayList<KanjiData> AnkiImport = null;
+            AnkiImport = ankiparser.AnkiParser(primaryStage);
+            KanjiDatabase = AnkiImport;
+            if(ind < KanjiDatabase.size()-1) {
+                kanjiTextPrint.setText("");
+                KanjiData.TextKanjiList(KanjiDatabase, kanjiTextPrint, ind);
+            }
+
+            primaryStage.setScene(scene1);
 
 
         });
@@ -155,6 +194,7 @@ public class Main extends Application {
 
 
         VBox vbox = new VBox(kanjiTextPrint);
+
 
 
         secondMenutitlte.setLayoutY(25);
@@ -192,6 +232,7 @@ public class Main extends Application {
         showAnswer.setLayoutX(370);
         layer0.getChildren().add(vbox);
         root.getChildren().add(Filebtn);
+        root.getChildren().add(Importbtn);
         layer0.getChildren().add(Readbtn);
         layer0.getChildren().add(Backbtn);
         layer0.getChildren().add(secondMenutitlte);

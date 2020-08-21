@@ -11,6 +11,13 @@ public class KanjiData {
         String KunReading;
 
         public KanjiData(int tempID, String tempCharacter, String tempMeaning, String tempOn, String s) {
+
+
+                tempMeaning = tempMeaning.trim();
+                tempOn = tempOn.trim();
+                s = s.trim();
+
+
                 KanjiID = tempID;
                 KanjiCharacter = tempCharacter;
                 KanjiMeaning = tempMeaning;
